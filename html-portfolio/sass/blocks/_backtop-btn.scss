@@ -1,0 +1,14 @@
+.backtop-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 100;
+    font-size: 50px;
+    color: #FF543E;
+    display: inline-block;
+    text-decoration: none;
+/* Mobile XS */
+@media (max-width: 767px) {
+    right: 0px;
+}
+}

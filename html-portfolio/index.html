@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- encoding -->
+    <meta charset="UTF-8" />
+    <!-- Mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title and SEO -->
+    <title>Портфолио</title>
+    <meta name="description" content="Описание страницы" />
+    <meta name="keywords" content="ключевые слова, фразы" />
+
+    <!-- Styles -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <!-- <meta property="og:url" content="https://webcademy.ru/" /> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Туристическое агентство Форест Тревел" />
+    <meta property="og:description" content="Турпоходы по дикой природе" />
+    <meta property="og:image" content="./img/opengraph.jpg" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/favicon/safari-pinned-tab.svg"
+      color="#1a60cf"
+    />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta
+      name="msapplication-config"
+      content="./img/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <nav class="navigation-top" id="top">
+      <div class="container">
+        <div class="navigation">
+          <div class="header__nav-text">
+            <a class="nav-text" href="#skills">Навыки</a>
+            <a class="nav-text" href="#portfolio">Портфолио</a>
+            <a class="nav-text" href="#work">Как я работаю</a>
+            <a class="nav-text" href="#contact">Контакты</a>
+          </div>
+          <div class="header__nav-icons">
+            <!-- <a href="#!">
+              <svg class="icon-id">
+                <use xlink:href="./img/sprite.svg#iconsId"></use>
+              </svg>
+            </a> -->
+            <a target="_blank" href="https://github.com/MAleksandr89">
+              <svg class="icon-gh">
+                <use xlink:href="./img/sprite.svg#iconGh"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="navigation-top-mobile">HTML Верстальщик</div>
+          <button class="header__buttons-nav-icon nav-icon">
+            <div class="nav-icon__middle"></div>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav">
+        <div class="mobile-nav__container">
+          <div class="mobile__nav-text">
+            <a class="nav-text" href="#skills">Навыки</a>
+            <a class="nav-text" href="#portfolio">Портфолио</a>
+            <a class="nav-text" href="#work">Как я работаю</a>
+            <a class="nav-text" href="#contact">Контакты</a>
+          </div>
+          <div class="mobile-social">
+            <div class="socials">
+              <a target="_blank" href="https://t.me/alexmak89">
+                <svg class="icons-social">
+                  <use xlink:href="./img/sprite.svg#iconTg"></use>
+                </svg>
+              </a>
+              <a target="_blank" href="https://vk.com/id742580768">
+                <svg class="icons-social">
+                  <use xlink:href="./img/sprite.svg#iconVk"></use>
+                </svg>
+              </a>
+              <!-- <a href="#!">
+                <svg class="icons-social">
+                  <use xlink:href="./img/sprite.svg#iconFb"></use>
+                </svg>
+              </a> -->
+              <!-- <a href="#!">
+                <img src="./img/socialIcons/instagram.svg" alt="" />
+                 <svg class="icons-social">
+              <use xlink:href="./img/sprite.svg#iconIns"></use>
+            </svg>
+              </a> -->
+              <a target="_blank" href="https://wa.me/79654306353?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%83+%D0%BC%D0%B5%D0%BD%D1%8F+%D0%B5%D1%81%D1%82%D1%8C+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81">
+                <svg class="icons-social">
+                  <use xlink:href="./img/sprite.svg#iconWp"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="mobile-mail">
+              <a class="mail" href="#!">amakunin@list.ru</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="overlay"></div> -->
+      </div>
+    </nav>
+    <header class="header" >
+      <section class="header__titile">
+        <div class="container">
+          <div class="header__titile-wrapper">
+            <div class="header_title-name">
+              <h1 class="title-1 gradient">Макунин Александр</h1>
+              <p class="subtitle">
+                Верстальщик сайтов, веб-разработчик. Оперативная верстка.
+                Работаю с соблюдением сроков и выполнением ТЗ.
+              </p>
+              <div class="butoons-block">
+                <button class="buttons">
+                  <a href="#skills">Познакомиться</a>
+                </button>
+                <button class="buttons"><a href="#contact">Контакты</a></button>
+              </div>
+            </div>
+            <div class="header_title-foto">
+              <img src="./img/header/headerFoto.jpg" alt="Main Foto" />
+            </div>
+            <div class="subtitle-mobile">
+              <p>
+                Верстальщик сайтов, веб-разработчик. Оперативная верстка.
+                Работаю с соблюдением сроков и выполнением ТЗ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="header__bg">
+        <img src="./img/header/HeaderImg.jpg" alt="Foto" />
+      </section>
+      <section data-aos="zoom-in"
+      data-aos-easing="linear"
+      data-aos-duration="1500" class="header__skills" id="skills">
+        <div class="container">
+          <div class="header__skills-wrapper">
+            <div class="header__skills-left">
+              <h2 class="title-3">Что я умею:</h2>
+              <ul class="skills-subtitle">
+                <li>pixel perfect, полное соответствие макету</li>
+                <li>верстаю с сеткой или без</li>
+                <li>адаптивная верстка под мобильные устройства</li>
+                <li>оптимизация по retina экраны</li>
+                <li>с Bootstrap и без него</li>
+              </ul>
+            </div>
+            <div class="header__skills-right">
+              <h2 class="title-3">На связи:</h2>
+              <div class="socials">
+                <a target="_blank" href="https://t.me/alexmak89">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconTg"></use>
+                  </svg>
+                </a>
+                <a target="_blank" href="https://vk.com/id742580768">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconVk"></use>
+                  </svg>
+                </a>
+  
+                <!-- <a href="#!">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconFb"></use>
+                  </svg>
+                </a>
+                <a href="#!">
+                  <img src="./img/socialIcons/instagram.svg" alt="" />
+                  <svg class="icons-social">
+									<use xlink:href="./img/sprite.svg#iconIns"></use>
+								</svg>
+                </a> -->
+                <a target="_blank" href="https://wa.me/79654306353?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%83+%D0%BC%D0%B5%D0%BD%D1%8F+%D0%B5%D1%81%D1%82%D1%8C+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconWp"></use>
+                  </svg>
+                </a>
+              </div>
+              <a class="mail" href="#!">amakunin@list.ru</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section class="section__portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__portfolio-content">
+          <div class="section__portfolio-titile">
+            <h2 class="title-2 gradient">Портфолио</h2>
+          </div>
+          <div class="mix-block">
+            <div class="mix-block__btn">
+              <button type="button" data-filter="all">Все работы</button>
+              <button type="button" data-filter=".html">HTML верстка</button>
+              <button type="button" data-filter=".wp">WordPress</button>
+            </div>
+            <div class="section__portfolio-cards" id="mix-card">
+              <div class="project-card mix html">
+                <div class="card-img">
+                  <a class="card-link" href="../Forest/index.html">
+                    <div class="card-image">
+                      <img src="./img/HEADER1.jpg" alt="Forest Trefal" />
+                      <span>Смотреть проект</span>
+                    </div>
+                    <div class="card-description">
+                      <h4 class="title-4">Верстка “Форест тревел”</h4>
+                      <p class="subtitle-portfolio">
+                        Верстка многостраничного сайта
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="project-card mix html">
+                <div class="card-img">
+                  <div class="card-img">
+                    <a class="card-link" href="../Unit/index.html">
+                      <div class="card-image">
+                        <img src="./img/HEADER.jpg" alt="Unit" />
+                        <span>Смотреть проект</span>
+                      </div>
+                      <div class="card-description">
+                        <h4 class="title-4">Сайт приложения “Юнит”</h4>
+                        <p class="subtitle-portfolio">Верстка лендинга</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card mix wp">
+                  <div class="card-img">
+                    <a class="card-link" href="#!">
+                       <div class="card-img-small">
+                         <img src="./img/portfolioimg/auto1.jpg" alt="Auto" />
+                          <span>Смотреть проект</span>
+                       </div>
+                        <h5 class="title-5">Верстка “Мир Авто”</h5>
+                        <p class="subtitle-portfolio">Верстка многостраничного сайта</p>
+                    </a>
+                  </div>
+              </div>
+              <div class="project-card mix wp">
+                <div class="card-img">
+                <a class="card-link" href="#!">
+                <div class="card-img-small">
+                  <img src="./img/portfolioimg/auto3.jpg" alt="Auto" />
+                  <span>Смотреть проект</span>
+                </div>
+                <h5 class="title-5">Верстка “Мир Авто”</h5>
+                <p class="subtitle-portfolio">Верстка многостраничного сайта</p>
+              </a>
+            </div>
+              </div>
+              <div class="project-card mix wp">
+                <div class="card-img">
+                <a class="card-link" href="#!">
+                <div class="card-img-small">
+                  <img src="./img/portfolioimg/auto2.jpg" alt="Auto" />
+                  <span>Смотреть проект</span>
+                </div>
+                <h5 class="title-5">Верстка “Мир Авто”</h5>
+                <p class="subtitle-portfolio">Верстка многостраничного сайта</p>
+              </a>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sectiont__work" id="work">
+      <div class="container">
+        <div class="section__work-content">
+          <div class="section__work-title">
+            <h3 class="title-2 gradient">Как я работаю</h3>
+          </div>
+          <div class="section__work-timeline">
+            <div class="timeline-item">
+              <h5 class="title-5 gradient">Оцениваю макет</h5>
+              <p class="subtitle-item">
+                Оцениваю объем работы, сложность,<br />нюансы. Задаю вопросы.
+              </p>
+              <p class="subtitle-item-strong">Время: 2 часа</p>
+            </div>
+            <div class="timeline-item">
+              <h5 class="title-5 gradient">ТЗ, смета и график работ</h5>
+              <p class="subtitle-item">
+                Согласовываем техническое задание и <br />
+                график работ по проекту. Осмечиваю <br />стоимость по этапам
+                работы.
+              </p>
+              <p class="subtitle-item-strong">Время: 2 - 4 часа</p>
+            </div>
+            <div class="timeline-item">
+              <h5 class="title-5 gradient">Вы держите руку на пульсе</h5>
+              <p class="subtitle-item">
+                Выдаю клиенту доступ к GitHub репозиторию и доске Trello. Вы в
+                любое время можете видеть актуальное состояние проекта и задач.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h5 class="title-5 gradient">Выполняю каждый этап</h5>
+              <p class="subtitle-item">
+                Поочередно выполняю каждый этап работы. Передаю результаты.
+                Заказчик производит поэтапную оплату.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h5 class="title-5 gradient">Финальное ревью проекта</h5>
+              <p class="subtitle-item">
+                Проект готов. Финальное ревью и полировка до идеального
+                состояния. Передаю файлы проекта, заливаю сайт на хостинг
+                заказчика.
+              </p>
+              <p class="subtitle-item-strong">Время: 2 - 4 часа</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section__contact" id="contact">
+      <div class="container">
+        <div class="section__contact-wrapper">
+          <div class="section__contact-title">
+            <h2 class="title-2 gradient">Контакты</h2>
+          </div>
+          <div class="section__contact-conct">
+            <div class="section__contact-wrapper">
+              <div class="section__contact-text">
+                <p>
+                  Если вы ищите специалиста по верстке сайтов или frontend
+                  разработчика в команду для работы над проектом — напишите мне.
+                </p>
+              </div>
+              <div class="section__contact-mail">
+                <ul class="contact">
+                  <li class="contact-item">
+                    <p>Email</p>
+                    <a href="#!" class="mail">amakunin@list.ru</a>
+                  </li>
+                  <li class="contact-item">
+                    <p>Телефон</p>
+                    <a href="#!" class="mail">+7 (965) 430-63-53</a>
+                  </li>
+                  <li class="contact-item">
+                    <p></p>
+                    <a href="./img/ma.pdf" class="mail">Ссылка на резюме</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="socials">
+                <a target="_blank" href="https://t.me/alexmak89">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconTg"></use>
+                  </svg>
+                </a>
+                <a target="_blank" href="https://vk.com/id742580768">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconVk"></use>
+                  </svg>
+                </a>
+                <!-- <a href="#!">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconFb"></use>
+                  </svg>
+                </a> -->
+                <!-- <a href="#!">
+                  <img src="./img/socialIcons/instagram.svg" alt="instagram" />
+                  <svg class="icons-social">
+                  <use xlink:href="./img/sprite.svg#iconIns"></use>
+                </svg>
+                </a> -->
+                <a target="_blank" href="https://wa.me/79654306353?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%83+%D0%BC%D0%B5%D0%BD%D1%8F+%D0%B5%D1%81%D1%82%D1%8C+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81">
+                  <svg class="icons-social">
+                    <use xlink:href="./img/sprite.svg#iconWp"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <form class="section__contact-form">
+              <div class="form">
+                <span class="fake-text">Ваш Email</span>
+              <input class="form-item" type="email" name="email" >
+            </div>
+            <div class="form">
+              <span class="fake-text">Сообщение</span>
+              <textarea name="message" id="#" cols="30" rows="10" class="form-item"></textarea>
+            </div>
+            <div class="form-btn"></div>
+              <button class="btn" type="submit">Отправить</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- <img class="contact-img" src="./img/icons/contacts-icon.svg.svg" alt=""> -->
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__copy">
+          <p class="copy">&copy2022 — Александр Макунин</p>
+          <p class="footer__descr">
+            Веб-разработчик из Москвы, занимаюсь версткой и созданием сайтов.
+          </p>
+          <p class="footer__descr">
+            Этот сайт сделал в рамках прохождения обучения по верстке на курсах
+            от
+            <a class="footer__ref" href="https://webcademy.ru/">WebCademy.ru</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <a href="#top" class="backtop-btn" id="backtop">&uarr;</a>
+
+    <!-- Библиотека jQuery -->
+    <script src="./libs/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="./libs/jQuery/jquery.validate.min.js"></script>
+    <!-- mixitUp -->
+    <script src="./libs/mixitup.min.js"></script>
+    <!-- Custom Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>

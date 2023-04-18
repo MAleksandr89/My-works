@@ -1,0 +1,116 @@
+// Ширина и высота линии в иконке
+$lineWidth: 40px;
+$lineHeight: 5px;
+$radius: 0px;
+$lineMargin: 4px;
+$color: #000;
+
+// Размеры контейнера
+// $width: $lineWidth;
+// $height: $lineHeight * 3 + $lineMargin * 2;
+
+$width: 40px;
+$height: 25px;
+
+.nav-icon {
+  width: $width;
+  height: $height;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  z-index: 9999;
+  transition: background-color 0.2s ease-in;
+
+  cursor: pointer;
+
+  // &:hover {
+  //   background-color: #fff;
+  //   .nav-icon__middle,
+  //   .nav-icon__middle::after,
+  //   .nav-icon__middle::before {
+  //     background-color: #fff;
+  //   }
+  // }
+}
+
+.nav-icon__middle {
+  position: relative;
+  width: $lineWidth;
+  height: $lineHeight;
+  background-color: $color;
+  border-radius: $radius;
+  transition: background-color 0.2s ease-in;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: $lineWidth;
+    height: $lineHeight;
+    transition: background-color 0.2s ease-in;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    background-color: $color;
+    border-radius: $radius;
+  }
+
+  &::before {
+    top: -($lineHeight + $lineMargin);
+  }
+
+  &::after {
+    top: $lineHeight + $lineMargin;
+  }
+}
+
+/* Active state */
+.nav-icon.nav-icon--active {
+  position: fixed;
+  top: 30px;
+  right: 15px;
+}
+.nav-icon.nav-icon--active .nav-icon__middle {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header__buttons-nav-icon {
+  display: none;
+
+  /* Tablet small */
+  @media (max-width: 899px) {
+    display: block;
+  }
+}
+
+.navigation-top-mobile {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: #000000;
+  display: none;
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    display: block;
+  }
+}
