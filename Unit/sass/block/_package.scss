@@ -1,0 +1,120 @@
+.section-price__row{
+  display: flex;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
+
+/* Mobile */
+@media (max-width: 899px) {
+   flex-direction: column;
+   margin-top: -30px;
+   align-items: center;
+}
+}
+.section-price__row >*{
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 300px;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+     width: 270px;
+  }
+
+  /* Mobile */
+  @media (max-width: 899px) {
+     margin-top: 30px;
+     width: 300px;
+  }
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    width: 290px;
+  }
+}
+.package {
+  display: flex;
+  flex-direction: column;
+  // width: 300px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #FFFFFF;
+  text-align: center;
+
+}
+
+.package--special{
+  background-color: #304FFE;
+  & .package__title{
+    color: #FFFFFF;
+  }
+  & .package__period{
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+.package__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.package__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #B2B2B2;
+
+}
+.package__price {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.package__period {
+  display: inline-block;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.package__list {
+  margin-bottom: 58px;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.package__list-item {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #FFFFFF;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+}
+
+.package__button{
+  margin-top: auto;
+}

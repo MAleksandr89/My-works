@@ -1,0 +1,29 @@
+
+.button-otline {
+  height: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 30px;
+  border: none;
+
+  background:transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:hover{
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.8s;
+  }
+  &:focus{
+    outline: none;
+    background:rgb(0, 0, 0);
+  }
+}

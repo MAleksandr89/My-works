@@ -1,0 +1,40 @@
+//Base
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+
+//Sections
+@import "./sections/header";
+@import "./sections/section-cta";
+@import "./sections/section-tasks";
+@import "./sections/section-functional";
+@import "./sections/section-focus";
+@import "./sections/section-price";
+@import "./sections/section-clients";
+@import "./sections/footer";
+
+//Blocks
+@import "./block/form";
+@import "./block/buttons";
+@import "./block/title";
+@import "./block/subtitle";
+@import "./block/card";
+@import "./block/package";
+@import "./block/button-otline";
+@import "./block/button-solid";
+@import "./block/slider";
+@import "./block/nav-icon";
+@import "./block/nav";
+@import "./block/search";
+
+//owlCarouselThem
+@import "./owlCarouselThem/vars";
+@import "./owlCarouselThem/theme";
+
+
+
+//Media
+@import "./media/media";
+
+
