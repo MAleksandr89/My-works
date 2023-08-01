@@ -152,8 +152,6 @@ legend {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
   z-index: 1000;
   top: -30px;
   -webkit-backdrop-filter: blur(9px);
