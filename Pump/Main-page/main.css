@@ -22,7 +22,7 @@
   }
   .header_nav__3YBcv {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 1100px;
   }
 
@@ -38,6 +38,8 @@
   .header_nav-items__bfXCq {
     display: flex;
     padding-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .header_nav-items__bfXCq ul {
     display: flex;
@@ -447,7 +449,7 @@
   }
   
   .main_desc__b6w1q {
-    width: 445px;
+    width: 570px;
   }
   .main_desc__b6w1q img {
     margin-bottom: 30px;
