@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.c4120f84.css",
+    "main.js": "./static/js/main.fa679e53.js",
+    "static/media/AspenPumps_land_1600x1060-min.jpg": "./static/media/AspenPumps_land_1600x1060-min.701600bee2b6d6c1b4f6.jpg",
+    "static/media/FP2406-2.jpg": "./static/media/FP2406-2.4d8e95aebb6b69525504.jpg",
+    "static/media/FP3349.jpg": "./static/media/FP3349.b3afd9ee063824ac3a88.jpg",
+    "static/media/FP2212.jpg": "./static/media/FP2212.c28a46c4a1efddb22e39.jpg",
+    "static/media/FP1056-2.jpg": "./static/media/FP1056-2.daa7b1ee24f3f9e28740.jpg",
+    "static/media/FP1080-2.jpg": "./static/media/FP1080-2.5818bd43926537d2e4f8.jpg",
+    "static/media/logo.png": "./static/media/logo.961f16f299755b47ccb7.png",
+    "index.html": "./index.html",
+    "main.c4120f84.css.map": "./static/css/main.c4120f84.css.map",
+    "main.fa679e53.js.map": "./static/js/main.fa679e53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4120f84.css",
+    "static/js/main.fa679e53.js"
+  ]
+}
