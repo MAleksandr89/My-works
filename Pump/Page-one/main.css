@@ -6,6 +6,7 @@
   margin-top: 136px;
 }
 .footer_contact__SF9bl h2 {
+  text-align: center;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
@@ -864,6 +865,7 @@
 }
 
 .price {
+  padding-top: 15px;
   font-size: 22px;
   font-weight: 700;
 }

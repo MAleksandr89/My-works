@@ -3,6 +3,8 @@
 }
 
 .contact-info h1{
+    text-align: center;
+    color: black;
     padding-top: 40px;
     font-size: 20px;
 }
