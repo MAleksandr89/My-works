@@ -1,0 +1,203 @@
+/**
+ * search-live.css
+ *
+ * Copyright (c) "kento" Karim Rahimpur www.itthinx.com
+ *
+ * This code is released under the GNU General Public License.
+ * See COPYRIGHT.txt and LICENSE.txt.
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This header and all notices must be kept intact.
+ *
+ * @author itthinx
+ * @package search-live
+ * @since 1.0.0
+ */
+
+div.search-live {
+	box-sizing: border-box;
+	display: block;
+	float: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.search-live div.search-live-form {
+	display: block;
+	float: none;
+	position: relative;
+	width: 100%;
+}
+
+.search-live div.search-live-form input {
+	width: 100%;
+}
+
+.search-live div.search-live-form form.search-live-form {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.search-live div.search-live-results {
+	box-sizing: border-box;
+	display: block;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0;
+	border: none;
+}
+.search-live div.search-live-results-content {
+	display: block;
+	float: none;
+	height: auto; /* adapt height to results, good when max-height is used to avoid showing an empty box when no search was done;
+	/* max-height will be set explicitly if requested */
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: static;
+	z-index: auto;
+	width: 100%; /* necessary to fill the whole available width always even if the contents are narrower */
+	padding: 0;
+	margin: 0;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+.search-live div.search-live-results-content:empty {
+	border: none;
+}
+
+.search-live div.search-live.floating div.search-live-results-content {
+	position: absolute;
+	z-index: 99999;
+}
+
+.search-live div.search-live-form span.search-live-field-clear {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	height: 1px;
+	overflow: visible;
+	margin: auto 0;
+	top: -1em;
+	bottom: 0.5em;
+	padding: 0 0.5em;
+}
+.search-live div.search-live-form span.search-live-field-clear:after {
+	content: "\d7";
+}
+
+.search-live input[type="text"].search-live-field {
+	margin: 0;
+	display: inline-block;
+}
+
+.search-live div.search-live-form form.search-live-form.show-submit-button {
+	display: flex;
+}
+.search-live div.search-live-form form.search-live-form.show-submit-button input[type="text"].search-live-field {
+	display: inline-block;
+	overflow: hidden;
+	flex: auto;
+}
+.search-live div.search-live-form form.search-live-form.show-submit-button span.search-live-field-clear {
+	display: inline-block;
+	flex: auto;
+	position: relative;
+	overflow: visible;
+	margin: auto 0;
+	right: 1em;
+	height: auto;
+	width: 0;
+	top: auto;
+	bottom: auto;
+	padding: 0;
+}
+.search-live div.search-live-form form.search-live-form.show-submit-button button {
+	display: inline-block;
+	flex: initial;
+	margin: 0 0 0 2px;
+	padding: 0.3em 0.5em;
+}
+
+.search-live .search-live-results-content {
+	display: none;
+}
+.search-live .search-live-form input.blinker {
+	background-image: url( ../images/blinker.gif );
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.search-live .search-live-results .entry,
+.search-live .search-live-results .no-results {
+	padding: 1px;
+}
+
+.search-live .search-live-results .entry a {
+	text-decoration: none;
+}
+.search-live .search-live-results .entry span.title {
+	font: inherit;
+	display: block;
+}
+.search-live .search-live-results .entry span.title,
+.search-live .search-live-results .entry span.description,
+.search-live .search-live-results .entry img.thumbnail {
+	vertical-align: middle;
+}
+.search-live .search-live-results .entry span.description {
+	display: block;
+	font-size: 80%;
+}
+.search-live .search-live-results .entry img.thumbnail {
+	max-width: none;
+}
+.search-live .search-live-results .entry a span.title:hover {
+	text-decoration: underline;
+}
+.search-live .search-live-results .entry:hover,
+.search-live .search-live-results .entry.active {
+	background-color: #ddd;
+	font-weight: bolder;
+}
+.search-live .search-live-results table.search-results {
+	table-layout: auto;
+}
+.search-live .search-live-results table.search-results {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	width: 100%;
+}
+.search-live .search-live-results table.search-results td:last-child {
+	width: 100%;
+}
+.search-live .search-live-results table.search-results tr:nth-child(n) td {
+	background-color: inherit;
+}
+.search-live .search-live-results table.search-results tr,
+.search-live .search-live-results table.search-results tr td,
+.entry-content .search-live .search-live-results table.search-results tr td {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.search-live .search-live-results table.search-results tr td,
+.entry-content .search-live .search-live-results table.search-results tr td {
+	padding: 4px;
+	vertical-align: top;
+	text-align: left;
+}
