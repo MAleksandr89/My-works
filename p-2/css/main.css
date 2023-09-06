@@ -15,7 +15,7 @@
 .title-textblock .textblock--title h2 {
   font-size: 48px;
 }
-@media (max-width:799px) {
+@media (max-width: 799px) {
   .title-textblock .textblock--title h2 {
     font-size: 28px;
     line-height: 35px;
@@ -92,12 +92,11 @@
   margin-top: 100px;
 }
 
-@media (max-width:799px) {
+@media (max-width: 799px) {
   .btn {
     margin-bottom: 30px;
     margin-top: 50px;
   }
-  
 }
 
 .how-its-work {
@@ -169,29 +168,26 @@
   .news--title {
     width: 360px;
   }
-
 }
 
 .downloads-section .single-news .news--img .image-holder {
   width: 660px;
 }
-@media (max-width:799px) {
+@media (max-width: 799px) {
   .downloads-section .single-news .news--img .image-holder {
     width: 320px;
   }
-  
 }
 
-.ograni{
+.ograni {
   width: 385px;
 }
 
-@media (max-width:799px) {
+@media (max-width: 799px) {
   .ograni {
     width: 180px;
     font-size: 14px;
   }
-  
 }
 .single-news .news--img .image-holder:not(.team-holder) {
   padding-bottom: 100px;
@@ -236,7 +232,7 @@
   z-index: 99;
 }
 
-@media (max-width:799px) {
+@media (max-width: 799px) {
   .work-in-britany {
     left: 0px;
     top: -455px;
@@ -256,7 +252,6 @@
     width: 330px;
     font-size: 14px;
   }
-  
 }
 .britany {
   cursor: pointer;
@@ -314,9 +309,7 @@
   overflow-y: scroll;
 }
 
-
-
-@media (max-width:799px) {
+@media (max-width: 799px) {
   .hidden-class {
     display: none;
   }
