@@ -272,7 +272,7 @@
 .fade-content--title h2 {
   font-size: 78px;
   line-height: 120px;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 
 .fade-content--title {
@@ -310,7 +310,7 @@
 }
 
 .country {
-  height: 880px;
+  height: 770px;
   overflow-y: scroll;
 }
 

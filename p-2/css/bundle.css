@@ -8827,7 +8827,7 @@ section.gsap-slider {
 .single-news {
   height: 100vh;
   display: flex;
-  padding-top: 40vh;
+  padding-top: 33vh;
 }
 @media (max-width: 1300px) {
   .single-news {
