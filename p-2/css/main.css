@@ -15,6 +15,13 @@
 .title-textblock .textblock--title h2 {
   font-size: 48px;
 }
+@media (max-width:799px) {
+  .title-textblock .textblock--title h2 {
+    font-size: 28px;
+    line-height: 35px;
+    margin-top: 25px;
+  }
+}
 
 @media (max-height: 599px) {
   .title-textblock .textblock--title h2 {
@@ -85,6 +92,14 @@
   margin-top: 100px;
 }
 
+@media (max-width:799px) {
+  .btn {
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  
+}
+
 .how-its-work {
   background-color: #fff2cc;
   width: 650px;
@@ -99,6 +114,18 @@
   padding-top: 10px;
 }
 
+@media (max-width: 799px) {
+  .how-its-work {
+    overflow: scroll;
+    width: 100%;
+    left: 0px;
+    padding-right: 10px;
+    top: 200px;
+    height: 80%;
+    top: 0px;
+  }
+}
+
 .how-its-work h2 {
   font-size: 22px;
   line-height: 22px;
@@ -110,7 +137,7 @@
 }
 
 .active.how-its-work {
-  display: inline-block;
+  display: block;
 }
 
 .logo.active {
@@ -131,8 +158,40 @@
   margin-bottom: 30px;
 }
 
+.news--title {
+  width: 590px;
+}
+
+@media (max-width: 799px) {
+  .downloads-section .single-news .news--title h2 {
+    font-size: 16px;
+  }
+  .news--title {
+    width: 360px;
+  }
+
+}
+
 .downloads-section .single-news .news--img .image-holder {
   width: 660px;
+}
+@media (max-width:799px) {
+  .downloads-section .single-news .news--img .image-holder {
+    width: 320px;
+  }
+  
+}
+
+.ograni{
+  width: 385px;
+}
+
+@media (max-width:799px) {
+  .ograni {
+    width: 180px;
+    font-size: 14px;
+  }
+  
 }
 .single-news .news--img .image-holder:not(.team-holder) {
   padding-bottom: 100px;
@@ -176,6 +235,29 @@
   padding: 10px;
   z-index: 99;
 }
+
+@media (max-width:799px) {
+  .work-in-britany {
+    left: 0px;
+    top: -455px;
+    width: 330px;
+    font-size: 14px;
+  }
+  .work-in-britany p {
+    font-size: 14px;
+  }
+  .work-in-britany-1 p {
+    font-size: 14px;
+  }
+
+  .work-in-britany-1 {
+    left: 0px;
+    top: -530px;
+    width: 330px;
+    font-size: 14px;
+  }
+  
+}
 .britany {
   cursor: pointer;
 }
@@ -201,9 +283,8 @@
 .fade-content--title p {
   font-size: 38px;
   line-height: 55px;
-  color: #FFF;
+  color: #fff;
 }
-
 
 .rigion-city {
   width: 100%;
@@ -223,7 +304,20 @@
   height: 900px;
 }
 
-.img-bg img{
+.img-bg img {
   height: 100%;
   width: 100%;
+}
+
+.country {
+  height: 880px;
+  overflow-y: scroll;
+}
+
+
+
+@media (max-width:799px) {
+  .hidden-class {
+    display: none;
+  }
 }
