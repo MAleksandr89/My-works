@@ -6668,7 +6668,7 @@ header .burger:hover {
 .footer-main .footer-contacts .footer-col {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 280px;
 }
 @media (max-width: 769px) {
   .footer-main .footer-contacts .footer-col {
