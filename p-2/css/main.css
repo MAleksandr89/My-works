@@ -148,7 +148,7 @@
 }
 .textblock--content-inner img {
   position: absolute;
-  top: 180px;
+  top: 215px;
   left: 490px;
   width: 45px;
 }
@@ -207,7 +207,7 @@
 .work-in-britany {
   display: none;
   position: absolute;
-  top: -200px;
+  top: -60px;
   left: 590px;
   width: 640px;
   background-color: #fff;
