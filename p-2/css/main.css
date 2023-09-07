@@ -308,9 +308,22 @@
   height: 770px;
   overflow-y: scroll;
 }
+.margin{
+  margin-left: -1240px;
+}
+.map {
+  display: flex;
+  gap: 45px;
+}
 
 @media (max-width: 799px) {
   .hidden-class {
     display: none;
+  }
+  .margin{
+    margin-left: 0px;
+  }
+  .map {
+    display: block;
   }
 }

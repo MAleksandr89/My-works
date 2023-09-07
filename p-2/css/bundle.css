@@ -10049,7 +10049,8 @@ section.gsap-slider {
 }
 footer {
   z-index: 98;
-  position: relative;
+  /* position: relative; */
+
 }
 .animated-gallery {
   overflow: hidden;
