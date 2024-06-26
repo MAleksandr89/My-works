@@ -49,3 +49,23 @@ body {
     color: #FFF;
     transition: 0.8s;
 }
+
+
+.form {
+    display: none;
+    text-align: center;
+}
+
+.input {
+    width: 90px;
+    outline: none;
+    margin: 10px 5%;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+
+.input:focus {
+    border-color: #db5d5d;
+}
