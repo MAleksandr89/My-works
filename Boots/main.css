@@ -1,7 +1,12 @@
+body {
+    background-color: var(--tg-theme-bg-color);
+}
+
 .title {
     margin-top: 80px;
     font-size: 32px;
     text-align: center;
+    color: var(--tg-theme-text-color);
 }
 
 .img-wrapper {
@@ -18,6 +23,7 @@
     margin-top: 30px;
     font-size: 14px;
     text-align: center;
+    color: var(--tg-theme-hint-color);
 }
 
 .button {
