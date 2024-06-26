@@ -13,14 +13,29 @@
             <img class="img" src="./flying-pizza-with-flying-ingredients-on-background_843762-788.jpg" alt="Pizza">
         </div>
         <form id="form">
-            <input class="input" type="text" placeholder="Ваше имя">
-            <input class="input" type="email" placeholder="Email">
-            <input class="input" type="tel" placeholder="Телефон">
+            <input class="input" type="text" placeholder="Ваше имя" id="user_name">
+            <input class="input" type="email" placeholder="Email" id="user_email">
+            <input class="input" type="tel" placeholder="Телефон" id="user_phone">
             <button class="button" type="submit" id="order">Отправить</button>
         </form>
         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit officiis reiciendis dicta beatae molestias, deserunt similique nam aspernatur voluptate sed illo voluptas exercitationem vero eos autem quasi perspiciatis? Architecto.</p>
-        <button class="button" type="button">Купить</button>
+        <button class="button" type="button" id="buy">Купить</button>
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById('buy');
+        let order = document.getElementById('order');
+
+        buy.addEventListener('click', () => {
+            document.getElementById('root').style.display = 'none';
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name + ' ' + tg.initDataUnsafe.user.last_name;
+        });
+
+        order.addEventListener('click', () => {
+            tg.close()
+        })
+    </script>
 </body>
 </html>
