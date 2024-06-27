@@ -19,6 +19,7 @@
         <input class="input" type="text" placeholder="Ваше имя" id="user_name">
         <input class="input" type="email" placeholder="Email" id="user_email">
         <input class="input" type="tel" placeholder="Телефон" id="user_phone">
+        <div id="erros"></div>
         <button class="button" type="submit" id="order">Отправить</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -26,6 +27,9 @@
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById('buy');
         let order = document.getElementById('order');
+        tg.expand()
+
+
 
         buy.addEventListener('click', () => {
             document.getElementById('root').style.display = 'none';
@@ -34,6 +38,21 @@
         });
 
         order.addEventListener('click', () => {
+            document.getElementById('erros').value = '';
+            let name = document.getElementById('user_name').value;
+            let email = document.getElementById('user_email').value;
+            let phone = document.getElementById('user_phone').value;
+
+            if (name.length < 0 || email.length < 0 || phone.length < 0) {
+                document.getElementById('erros').innerHTML = 'Заполните все поля';
+            }
+
+            const data = {
+                name: name,
+                email: email,
+                phone: phone
+            }
+            tg.sendData(JSON.stringify(data))
             tg.close()
         })
     </script>
