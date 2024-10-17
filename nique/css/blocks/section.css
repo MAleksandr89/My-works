@@ -1,0 +1,36 @@
+.sections-wrapper {
+	padding-top: 80px;
+
+	display: grid;
+	gap: 96px;
+}
+
+.section {
+	scroll-margin-top: 80px;
+}
+
+.section-title {
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 32px;
+
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	color: var(--text-primary);
+}
+
+.section-list {
+	display: grid;
+	gap: 16px;
+}
+
+@media (max-width: 580px) {
+	.sections-wrapper {
+		gap: 48px;
+	}
+	.section-title {
+		margin-bottom: 16px;
+	}
+}

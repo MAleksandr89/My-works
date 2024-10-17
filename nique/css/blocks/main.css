@@ -1,0 +1,40 @@
+.main {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.main-nav {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	background: var(--background-default);
+
+	display: flex;
+	gap: 48px;
+	align-items: center;
+	justify-content: center;
+
+	position: sticky;
+	top: 0;
+	z-index: 9;
+}
+
+@media (max-width: 580px) {
+	.main-nav {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		gap: 30px;
+		/* gap: 15px; */
+		overflow: hidden;
+		overflow-x: scroll;
+		justify-content: flex-start;
+	}
+}
+
+.main-nav-link {
+}
+
+.main-nav-link.active {
+	color: var(--text-primary);
+}

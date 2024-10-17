@@ -1,0 +1,44 @@
+
+/* Nav */
+.nav {
+	padding-top: 47px;
+	padding-bottom: 108px;
+}
+
+.nav__row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	align-items: center;
+}
+
+.nav__list {
+}
+
+.nav__logo {
+	text-align: center;
+}
+.nav__btn {
+	text-align: right;
+}
+
+/* nav-list */
+
+.nav-list {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 156%;
+	color: var(--333333);
+}
+
+.nav-list__item {
+}
+
+.nav-list__link {
+	color: var(--333333);
+}

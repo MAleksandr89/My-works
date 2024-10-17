@@ -1,0 +1,33 @@
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 400;
+
+	background-color: #F8F7F5;
+
+	/* padding-bottom: 600px; */
+}
+
+.nunito {
+	font-family: 'Nunito', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1806px;
+	width: 100%;
+	padding: 0 15px;
+}
+
+.container--small {
+	max-width: 1144px;
+}
+
+.none {
+	display: none !important;
+}
