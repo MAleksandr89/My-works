@@ -160,10 +160,10 @@
                 return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, "\\$1");
             }
         
-            const message = `<b>#Отчёт</b>\n<b>Дата:</b>\n${formattedDate}\n<b>Проект:</b>\n#${objectName}\n<b>Чем занимались:</b>\n<i>${activity}</i>\n#${month}`;
+            const message = `#Отчёт1 <br><b>Дата:</b> \n <b>${escapeMarkdown(formattedDate)}</b> \n*Проект:* \n <b>#${escapeMarkdown(objectName)}</b>\n*Чем занимались:* \n <b>${escapeMarkdown(activity)}</b>\n #${escapeMarkdown(month)}`;
             const encodedMessage = encodeURIComponent(message);
             const url = `https://t.me/dc60bot?text=${encodedMessage}&parse_mode=html`;
-        
+            
             window.open(url, '_blank');
             alert('Отчет отправлен');
         });
