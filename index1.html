@@ -160,7 +160,7 @@
             }
 
         
-            const message = `#Отчёт \n**Дата:** \n ${formattedDate} \n**Проект:** \n #${escapeMarkdown(objectName)} \n**Чем занимались:** \n ${escapeMarkdown(activity)}\n #${escapeMarkdown(month)}`;
+            const message = `#Отчёт \n**Дата:** \n ${formattedDate} \n**Проект:** \n #${escapeMarkdown(objectName)} \n**Чем занимались:** \n ${activity}\n #${escapeMarkdown(month)}`;
             const encodedMessage = encodeURIComponent(message);
             const url = `https://t.me/dc60bot?text=${encodedMessage}&parse_mode=Markdown`;
             
