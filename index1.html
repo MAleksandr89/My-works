@@ -144,16 +144,15 @@
             const monthNames = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
             const month = monthNames[selectedDate.getMonth()];
         
-            // Формируем сообщение в HTML-разметке
-            const message = `<b>#Отчёт</b>\n<b>Дата:</b>\n${formattedDate}\n<b>Проект:</b>\n#${objectName}\n<b>Чем занимались:</b>\n<i>${activity}</i>\n#${month}`;
+            // Экранируем символы для MarkdownV2
+            function escapeMarkdown(text) {
+                return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, "\\$1");
+            }
         
-            // Кодируем только текст сообщения
+            const message = `*__#Отчёт__* \n*Дата:* \n ${escapeMarkdown(formattedDate)}\n*Проект:* \n #${escapeMarkdown(objectName)}\n*Чем занимались:* \n __${escapeMarkdown(activity)}__\n #${escapeMarkdown(month)}`;
             const encodedMessage = encodeURIComponent(message);
+            const url = `https://t.me/dc60bot?text=${encodedMessage}&parse_mode=MarkdownV2`;
         
-            // Формируем URL
-            const url = `https://t.me/dc60bot?text=${encodedMessage}&parse_mode=HTML`;
-        
-            // Открываем Telegram
             window.open(url, '_blank');
             alert('Отчет отправлен');
         });
