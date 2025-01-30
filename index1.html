@@ -62,15 +62,14 @@
         }
         .header {
             width: 520px;
-
+            
             @media screen and (max-width: 899px) {
                 width: 355px;
-            }
-
+                };
             @media screen and (max-width: 599px) {
                 width: 144px;
+                };
             }
-        }
     </style>
 </head>
 <body>
@@ -159,16 +158,16 @@
             function escapeMarkdown(text) {
                 return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, "\\$1");
             }
+
+            console.log("🚀 ~ document.getElementById ~ formattedDate:", formattedDate)
         
-            const message = `#Отчёт2 \n**Дата:** \n ${escapeMarkdown(formattedDate)} \n**Проект:** \n #${escapeMarkdown(objectName)} \n**Чем занимались:** \n ${escapeMarkdown(activity)}\n #${escapeMarkdown(month)}`;
+            const message = `#Отчёт2 \n**Дата:** \n ${formattedDate} \n**Проект:** \n #${escapeMarkdown(objectName)} \n**Чем занимались:** \n ${escapeMarkdown(activity)}\n #${escapeMarkdown(month)}`;
             const encodedMessage = encodeURIComponent(message);
             const url = `https://t.me/dc60bot?text=${encodedMessage}&parse_mode=Markdown`;
             
             window.open(url, '_blank');
-
             alert('Отчет отправлен');
         });
-        
     </script>
 </body>
 </html>
