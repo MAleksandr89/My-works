@@ -159,7 +159,6 @@
                 return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, "\\$1");
             }
 
-            console.log("🚀 ~ document.getElementById ~ formattedDate:", formattedDate)
         
             const message = `#Отчёт \n**Дата:** \n ${formattedDate} \n**Проект:** \n #${escapeMarkdown(objectName)} \n**Чем занимались:** \n ${escapeMarkdown(activity)}\n #${escapeMarkdown(month)}`;
             const encodedMessage = encodeURIComponent(message);
