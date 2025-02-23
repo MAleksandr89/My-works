@@ -13,8 +13,13 @@
 
     @media screen and (max-width: 900px) {
         padding: 10px;
-        justify-content: unset;
+        justify-content: space-between;
+        box-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.06);
     }
+}
+
+.pull-right {
+    display: flex;
 }
 
 .parent-link {
@@ -36,6 +41,14 @@
 .header-nav-links {
     @media screen and (max-width: 900px) {
         display: none !important;
+    }
+
+    & li { 
+        border-bottom: 1px dashed #EAEDF7;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 }
 
@@ -71,6 +84,14 @@
     @media screen and (max-width: 900px) {
         display: none;
     }
+}
+
+.wrapper-container {
+    display: none;
+    position: relative;
+    top: -45px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header-menu-burgers {
@@ -199,6 +220,8 @@
     width: 30%;
     height: 400px;
     overflow: overlay;
+    border-radius: 0px 0px 0px 14px;
+    border-top: unset
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -243,6 +266,8 @@
     border-left: none;
     height: 400px;
     overflow: overlay;
+    border-radius: 0px 0px 14px 0px;
+    border-top: unset;
 
     & p {
         margin: 0;
@@ -311,6 +336,7 @@
 
 .desc_info_mob {
     padding: 15px;
+    background-color: #f3f3f3;
 }
 
 .mobile-burger {

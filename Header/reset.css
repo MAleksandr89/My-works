@@ -46,6 +46,7 @@ width: 100%;
 overflow-x: hidden;
 overflow-y: auto;
 min-height: 100vh;
+margin: 0;
 }
 main {
 	overflow: clip;
@@ -11146,7 +11147,7 @@ svg.chm-add-spinner {
 	margin-left: 10px;
 	font-size: 16px;
 	color:#000;
-	font-weight: 500;
+	font-weight: 700;
 }
 .icon-arrow-left,
 .icon-mm-arrow {

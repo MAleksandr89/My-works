@@ -4,26 +4,24 @@ const headerBurger = document.getElementById('header-menu-burger')
 const tabList = document.getElementById('tabList')
 const lists = document.querySelectorAll('.tabcontent')
 
+const containerWrapper = document.querySelector('.wrapper-container')
+
 phoneWrapper.addEventListener('mouseenter', () => listPhone.style.display = 'block')
 phoneWrapper.addEventListener('mouseleave', () => listPhone.style.display = 'none')
 
 function openCity(evt, cityName) {
-    // Declare all variables
     var i, tabcontent, tablinks;
 
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the link that opened the tab
     const tab = document.getElementById(cityName)
     if ( tab ) tab.style.display = "block";
     evt.currentTarget.className += " active";
@@ -33,8 +31,10 @@ function openCity(evt, cityName) {
 headerBurger.addEventListener('click', () => {
     if ( tabList.style.display === 'none') {
         tabList.style.display = 'block'
+        containerWrapper.style.display = 'flex'
     } else {
         tabList.style.display = 'none'
+        containerWrapper.style.display = 'none'
     }
 
     for (let index = 0; index < lists.length; index++) {
