@@ -57,16 +57,15 @@ function closeNav() {
 
 const categoryWrapper = document.getElementById('category-wrapper')
 
-window.addEventListener('click', (event) => {
-    if (!categoryWrapper.contains(event.target) && !headerBurger.contains(event.target)) {
-        tabList.style.display = 'none'
 
-        for (let index = 0; index < lists.length; index++) {
-            const element = lists[index];
-            element.style.display = 'none'
-        }
+const closeMenu = () => {
+    tabList.style.display = 'none'
+    for (let index = 0; index < lists.length; index++) {
+        const element = lists[index];
+        element.style.display = 'none'
     }
-})
+    containerWrapper.style.display = 'none'
+}
 
 function openCatalog() {
     const element = document.querySelector('.mobm-main');
