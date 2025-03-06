@@ -103,3 +103,31 @@ function prevState() {
     category.setAttribute('active', 'true');
     category.removeAttribute('hidden');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(".header-search-input");
+
+    let timeout = null;
+
+    searchInput.addEventListener("input", function () {
+        clearTimeout(timeout);
+        const query = searchInput.value.trim();
+        console.log("🚀 ~ query:", query)
+
+        if (query.length > 3) {
+            timeout = setTimeout(() => {
+                fetchData(query);
+            }, 300); // Задержка перед отправкой запроса
+        }
+    });
+
+    function fetchData(query) {
+        fetch(`https://shop-avd.ru/index.php?route=unishop/search&filter_name=мойка&category_id=undefined`)
+        .then(data => {
+            console.log("Результаты поиска:", data);
+        })
+        .catch(error => {
+            console.log("Ошибка запроса:", error);
+        });
+    }
+});
