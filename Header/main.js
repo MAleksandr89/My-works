@@ -6,6 +6,8 @@ const lists = document.querySelectorAll('.tabcontent')
 
 const containerWrapper = document.querySelector('.wrapper-container')
 
+const searchResults = document.querySelector('.header-search-result');
+
 phoneWrapper.addEventListener('mouseenter', () => listPhone.style.display = 'block')
 phoneWrapper.addEventListener('mouseleave', () => listPhone.style.display = 'none')
 
@@ -104,6 +106,8 @@ function prevState() {
     category.removeAttribute('hidden');
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.querySelector(".header-search-input");
 
@@ -112,22 +116,63 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.addEventListener("input", function () {
         clearTimeout(timeout);
         const query = searchInput.value.trim();
-        console.log("🚀 ~ query:", query)
 
         if (query.length > 3) {
             timeout = setTimeout(() => {
+                searchResults.style.display = 'block'
+                searchResults.innerHTML = ''
                 fetchData(query);
-            }, 300); // Задержка перед отправкой запроса
+            }, 100);
         }
+        if (query.length === 0 || query.length <= 3) searchResults.innerHTML = ''
     });
 
     function fetchData(query) {
-        fetch(`https://shop-avd.ru/index.php?route=unishop/search&filter_name=мойка&category_id=undefined`)
+        fetch(`https://shop-avd.ru/index.php?route=unishop/search&filter_name=${query}&category_id=undefined`)
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`Ошибка HTTP: ${res.status}`);
+            }
+            return res.json();
+        })
         .then(data => {
-            console.log("Результаты поиска:", data);
+            console.log(data);
+            
+            if (Number(data.products_total) === 0) {
+                searchResults.innerHTML =
+                `<li>
+                    <div style="padding: 20px">Ничего не нашлось</div>
+                </li>`;
+                return
+            }
+
+            data.products.slice(-5).forEach(result => {
+                const resultElement = document.createElement('ul');
+                resultElement.classList.add('header-search-result-item');
+                resultElement.innerHTML = `
+                    <li>
+                        <a href="${result.url}" target="_blank">
+                            <img src="${result.image}">
+                            <div class="header-search-result-item-name">
+                                <div class="title-name">${result.name}</div>
+                                <div style="display: flex; align-items: center;">
+                                    <div>${result.price}</div>
+                                    <svg class="icon-arrow" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="arrow-right"><line class="cls-1" x1="29.08" x2="3.08" y1="16" y2="16"/><line class="cls-1" x1="29.08" x2="25.08" y1="16" y2="21"/><line class="cls-1" x1="29.08" x2="25.08" y1="16" y2="11"/></g></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                `;
+                searchResults.appendChild(resultElement);
+            });
         })
         .catch(error => {
             console.log("Ошибка запроса:", error);
         });
     }
+});
+
+
+window.addEventListener('click', (event) => {
+    searchResults.style.display = 'none'
 });
