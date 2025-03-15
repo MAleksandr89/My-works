@@ -182,6 +182,23 @@
     }
 }
 
+.header-search-result-category {
+    padding: 10px;
+    border-bottom: 1px solid #EAEDF7;
+
+    & a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        text-decoration: none;
+
+        & > p {
+            margin: 0;
+        }
+    }
+}
+
 .header-search-result-item-name {
     display: flex;
     justify-content: space-between;

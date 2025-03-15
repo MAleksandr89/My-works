@@ -136,8 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return res.json();
         })
         .then(data => {
-            console.log(data);
-            
             if (Number(data.products_total) === 0) {
                 searchResults.innerHTML =
                 `<li>
@@ -145,8 +143,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 </li>`;
                 return
             }
+            const products = data.products.filter(res => res.type === '0');
+            const category = data.products.filter(res => res.type === '1' && res.name > '');
 
-            data.products.slice(-5).forEach(result => {
+
+            category.forEach(result => {
+                const resultElement = document.createElement('div');
+                resultElement.classList.add('header-search-result-category');
+                resultElement.innerHTML = `
+                    <a href="${result.url}" target="_blank">
+                        <p>${result.name}</p>
+                        <span>${result.col_product} шт.</span>
+                    </a>
+                `;
+                searchResults.appendChild(resultElement);
+            });
+
+            products.forEach(result => {
                 const resultElement = document.createElement('ul');
                 resultElement.classList.add('header-search-result-item');
                 resultElement.innerHTML = `
