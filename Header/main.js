@@ -3,13 +3,20 @@ const listPhone = document.getElementById('drop-contacts')
 const headerBurger = document.getElementById('header-menu-burger')
 const tabList = document.getElementById('tabList')
 const lists = document.querySelectorAll('.tabcontent')
-
 const containerWrapper = document.querySelector('.wrapper-container')
-
 const searchResults = document.querySelector('.header-search-result');
+
+const customersBlock = document.getElementById('customers')
+console.log("🚀 ~ customersBlock:", customersBlock)
+const dropCustomers = document.getElementById('drop-customers')
+console.log("🚀 ~ dropCustomers:", dropCustomers)
+
 
 phoneWrapper.addEventListener('mouseenter', () => listPhone.style.display = 'block')
 phoneWrapper.addEventListener('mouseleave', () => listPhone.style.display = 'none')
+
+customersBlock.addEventListener('mouseenter', () => dropCustomers.style.display = 'block')
+customersBlock.addEventListener('mouseleave', () => dropCustomers.style.display = 'none')
 
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
@@ -122,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 searchResults.style.display = 'block'
                 searchResults.innerHTML = ''
                 fetchData(query);
-            }, 100);
+            }, 300);
         }
         if (query.length === 0 || query.length <= 3) searchResults.innerHTML = ''
     });
