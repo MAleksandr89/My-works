@@ -7,9 +7,7 @@ const containerWrapper = document.querySelector('.wrapper-container')
 const searchResults = document.querySelector('.header-search-result');
 
 const customersBlock = document.getElementById('customers')
-console.log("🚀 ~ customersBlock:", customersBlock)
 const dropCustomers = document.getElementById('drop-customers')
-console.log("🚀 ~ dropCustomers:", dropCustomers)
 
 
 phoneWrapper.addEventListener('mouseenter', () => listPhone.style.display = 'block')
