@@ -193,6 +193,7 @@
         height: 45px !important;
         align-items: center !important;
         width: 25px !important;
+        margin-right: 0 !important;
     }
 }
 
