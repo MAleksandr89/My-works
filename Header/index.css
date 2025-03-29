@@ -281,7 +281,8 @@
     text-overflow: ellipsis;
 
     @media screen and (max-width: 500px) {
-        width: 270px;
+        width: 100%;
+        max-width: 270px;
     }
 }
 
@@ -645,4 +646,14 @@
     right: 0;
     background-color: #F7F8FB;
     font-size: 20px !important;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    width: 90px;
+
+    @media screen and (max-width: 400px) {
+        width: 200px;
+    }
 }

@@ -61,6 +61,7 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("myNav").style.transform = "translate(-100%)";
+    openDefaultMenu();
 }
 
 const categoryWrapper = document.getElementById('category-wrapper')
@@ -177,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <img src="${result.image}">
                             <div class="header-search-result-item-name">
                                 <div class="title-name">${result.name}</div>
-                                <div style="display: flex; align-items: center;">
+                                <div class="title-price">
                                     <div>${result.price}</div>
                                     <svg class="icon-arrow" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="arrow-right"><line class="cls-1" x1="29.08" x2="3.08" y1="16" y2="16"/><line class="cls-1" x1="29.08" x2="25.08" y1="16" y2="21"/><line class="cls-1" x1="29.08" x2="25.08" y1="16" y2="11"/></g></svg>
                                 </div>
@@ -211,5 +212,11 @@ const handleOpenSearch = () => {
 }
 
 const closeMobileSearch = () => {
+    const searchInputs = document.querySelectorAll(".header-search-input");
+    searchInputs.forEach(input => input.value = '')
+
+    searchResultsMobile.innerHTML = ''
+    searchResultsDesktop.innerHTML = ''
+
     mobileSearchWrapper.style.transform = "translate(100%)";
 }
