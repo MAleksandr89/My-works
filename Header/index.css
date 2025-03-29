@@ -317,6 +317,7 @@
     background-color: #F7F8FB;
     color: #222;
     outline: none;
+    font-size: 16px;
 }
 
 .header-settings {
@@ -638,4 +639,8 @@
     border-radius: 8px;
     padding: 5px 10px;
     cursor: pointer;
+    position: fixed;
+    right: 0;
+    background-color: #F7F8FB;
+    font-size: 20px !important;
 }
