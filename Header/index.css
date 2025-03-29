@@ -192,6 +192,7 @@
         display: flex;
         height: 45px !important;
         align-items: center !important;
+        width: 50px !important;
     }
 }
 
