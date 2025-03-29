@@ -4,10 +4,11 @@ const headerBurger = document.getElementById('header-menu-burger')
 const tabList = document.getElementById('tabList')
 const lists = document.querySelectorAll('.tabcontent')
 const containerWrapper = document.querySelector('.wrapper-container')
-const searchResults = document.querySelector('.header-search-result');
-
+const searchResultsDesktop = document.querySelector('.header-search-result-desktop');
+const searchResultsMobile = document.querySelector('.header-search-result-mobile');
 const customersBlock = document.getElementById('customers')
 const dropCustomers = document.getElementById('drop-customers')
+const mobileSearchWrapper = document.querySelector('.mobile-search-wrapper')
 
 
 phoneWrapper.addEventListener('mouseenter', () => listPhone.style.display = 'block')
@@ -114,25 +115,28 @@ function prevState() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.querySelector(".header-search-input");
+    const searchInputs = document.querySelectorAll(".header-search-input");
 
     let timeout = null;
 
-    searchInput.addEventListener("input", function () {
-        clearTimeout(timeout);
-        const query = searchInput.value.trim();
+    searchInputs.forEach(input => {
+        input.addEventListener("input", function (event) {
+            const searchResults = event.target.id === 'search-mobile' ? searchResultsMobile : searchResultsDesktop
+            clearTimeout(timeout);
+            const query = input.value.trim();
+    
+            if (query.length > 3) {
+                timeout = setTimeout(() => {
+                    searchResults.style.display = 'block'
+                    searchResults.innerHTML = ''
+                    fetchData(query, searchResults);
+                }, 300);
+            }
+            if (query.length === 0 || query.length <= 3) searchResults.innerHTML = ''
+        });
+    })
 
-        if (query.length > 3) {
-            timeout = setTimeout(() => {
-                searchResults.style.display = 'block'
-                searchResults.innerHTML = ''
-                fetchData(query);
-            }, 300);
-        }
-        if (query.length === 0 || query.length <= 3) searchResults.innerHTML = ''
-    });
-
-    function fetchData(query) {
+    function fetchData(query, searchResults) {
         fetch(`https://shop-avd.ru/index.php?route=unishop/search&filter_name=${query}&category_id=undefined`)
         .then(res => {
             if (!res.ok) {
@@ -168,8 +172,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const resultElement = document.createElement('ul');
                 resultElement.classList.add('header-search-result-item');
                 resultElement.innerHTML = `
-                    <li>
-                        <a href="${result.url}" target="_blank">
+                    <li style="list-style: none">
+                        <a href="${result.url}" target="_blank" style="display: flex;">
                             <img src="${result.image}">
                             <div class="header-search-result-item-name">
                                 <div class="title-name">${result.name}</div>
@@ -192,5 +196,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 window.addEventListener('click', (event) => {
+    const searchResults = event.target.id === 'search-mobile' ? searchResultsMobile : searchResultsDesktop
     searchResults.style.display = 'none'
 });
+
+
+const openDefaultCatalog = () => {
+    openNav();
+    openCatalog();
+}
+
+const handleOpenSearch = () => {
+    mobileSearchWrapper.style.transform = "translate(0%)";
+}
+
+const closeMobileSearch = () => {
+    mobileSearchWrapper.style.transform = "translate(100%)";
+}

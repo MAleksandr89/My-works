@@ -34,7 +34,7 @@
         <header class="header-main">
             <div class="container header-container-main">
                 <div class="header-container">
-                    <div class="header-search mobile-search">
+                    <div onclick="handleOpenSearch();" class="header-search mobile-search ">
                         <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/></g></svg>
                     </div>
                     <div class="header-logo">
@@ -81,11 +81,11 @@
                     </div>
                 </div>
                 <div class="header-search-pannel">
-                    <input onkeydown="openCatalog(event);" class="header-search-input" type="text" placeholder="Поиск товара по каталогу">
+                    <input onkeydown="openCatalog(event);" class="header-search-desktop header-search-input" type="text" placeholder="Поиск товара по каталогу">
                     <div class="header-search">
                         <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/></g></svg>
                     </div>
-                    <div class="header-search-result">
+                    <div class="header-search-result-desktop">
 
                     </div>
                 </div>
@@ -938,7 +938,7 @@
                 <div class="mob-footer-title">Главная</div>
             </div>
 
-            <div>
+            <div onclick="openDefaultCatalog()">
                 <div style="display: flex; justify-content: center; align-items: center">
                     <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 16.2222C7 16.6518 6.66421 17 6.25 17H3.75C3.33579 17 3 16.6518 3 16.2222C3 15.7927 3.33579 15.4444 3.75 15.4444H6.25C6.66421 15.4444 7 15.7927 7 16.2222Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7 10C7 10.4296 6.66421 10.7778 6.25 10.7778H3.75C3.33579 10.7778 3 10.4296 3 10C3 9.57045 3.33579 9.22222 3.75 9.22222H6.25C6.66421 9.22222 7 9.57045 7 10Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.77778C7 4.20733 6.66421 4.55556 6.25 4.55556H3.75C3.33579 4.55556 3 4.20733 3 3.77778C3 3.34822 3.33579 3 3.75 3H6.25C6.66421 3 7 3.34822 7 3.77778Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 16.2222C17 16.6518 16.6642 17 16.25 17H8.75C8.33579 17 8 16.6518 8 16.2222C8 15.7927 8.33579 15.4444 8.75 15.4444H16.25C16.6642 15.4444 17 15.7927 17 16.2222Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 8.7037C13.6046 8.7037 14.5 7.77511 14.5 6.62963C14.5 5.48415 13.6046 4.55556 12.5 4.55556C11.3954 4.55556 10.5 5.48415 10.5 6.62963C10.5 7.77511 11.3954 8.7037 12.5 8.7037ZM12.5 10.2593C14.433 10.2593 16 8.63422 16 6.62963C16 4.62504 14.433 3 12.5 3C10.567 3 9 4.62504 9 6.62963C9 8.63422 10.567 10.2593 12.5 10.2593Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5528 12.5652C15.3058 12.6933 15.0055 12.5895 14.882 12.3333L13.8292 10.1498C13.7057 9.89365 13.8058 9.58219 14.0528 9.45412C14.2998 9.32605 14.6001 9.42987 14.7236 9.686L15.7764 11.8695C15.8999 12.1257 15.7998 12.4371 15.5528 12.5652Z"></path></svg>
                 </div>
@@ -966,6 +966,15 @@
                 <div class="mob-footer-title">Войти</div>
             </div>
 
+        </div>
+        <div class="mobile-search-wrapper">
+            <div class="header-search-pannel-mobile">
+                <input onkeydown="openCatalog(event);" id="search-mobile" class="header-search-input header-search-mobile" type="text" placeholder="Поиск товара по каталогу">
+                <button type="button" class="mobm-close-menu mob-close mob-close-menu" aria-label="Close" onclick="closeMobileSearch();">×</button>
+            </div>
+            <div class="header-search-result-mobile">
+
+            </div>
         </div>
         <script src="./main.js"></script>
 </body>

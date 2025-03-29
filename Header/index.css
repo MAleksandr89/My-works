@@ -3,7 +3,7 @@
     justify-content: space-between;
     padding: 15px 0px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         display: none;
     }
 }
@@ -61,7 +61,7 @@
 }
 
 .header-logo-svg {
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         width: 140px;
     }
 }
@@ -75,7 +75,7 @@
 .pull-right {
     display: flex;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         display: none;
     }
 }
@@ -119,7 +119,7 @@
         margin-right: 0px
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         width: 140px;
     }
 }
@@ -188,14 +188,14 @@
 .mobile-search {
     display: none;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         display: flex;
         height: 45px !important;
         align-items: center !important;
     }
 }
 
-.header-search-result {
+.header-search-result-desktop {
     position: absolute;
     width: 100%;
     top: 45px;
@@ -222,6 +222,7 @@
 
 .header-search-result-item {
     border-bottom: 1px solid #EAEDF7;
+    padding: 0px 5px;
 
     &:last-child {
         border-bottom: unset;
@@ -276,13 +277,33 @@
     width: 350px;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media screen and (max-width: 500px) {
+        width: 270px;
+    }
 }
 
 .icon-arrow {
     width: 0px;
 }
 
-.header-search-input {
+.header-search-desktop {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    background-color: transparent;
+
+    height: 40px;
+    border: 0px !important;
+    padding: 0 15px;
+    box-shadow: none !important;
+    border-radius: 8px 0px 0px 8px;
+    background-color: #F7F8FB;
+    color: #222;
+    outline: none;
+}
+
+.header-search-mobile {
     width: 100%;
     max-width: 600px;
     border: none;
@@ -344,7 +365,7 @@
     align-items: center;
     margin-left: 20px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         margin-left: 10px;
         font-size: 10px !important;
     }
@@ -585,11 +606,36 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px -2px 2px;
     padding: 15px 0px 13px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         display: flex;
     }
 }
 
 .mob-footer-title {
     font-size: 10px;
+}
+
+.mobile-search-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    transform: translate(100%);
+    transition: 0.2s;
+}
+
+.header-search-pannel-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.mob-close-menu {
+    border: 1px solid #F7F8FB;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
