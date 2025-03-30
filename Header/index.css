@@ -638,20 +638,19 @@
 }
 
 .mob-close-menu {
-    border: 1px solid #F7F8FB;
+    border: 1px solid #000;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 6px 11px;
     cursor: pointer;
     position: fixed;
     right: 0;
     background-color: #F7F8FB;
-    font-size: 20px !important;
+    font-size: 22px !important;
 }
 
 .title-price {
     display: flex;
     align-items: center;
-    width: 90px;
 
     @media screen and (max-width: 400px) {
         width: 200px;

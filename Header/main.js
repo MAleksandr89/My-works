@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInputs.forEach(input => {
         input.addEventListener("input", function (event) {
             const searchResults = event.target.id === 'search-mobile' ? searchResultsMobile : searchResultsDesktop
+            searchResults.style.display = 'none'
             clearTimeout(timeout);
             const query = input.value.trim();
     
