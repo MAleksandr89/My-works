@@ -1,0 +1,191 @@
+body {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 580px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card {
+    padding: 10px;
+    border: 1px solid #f2f4f8;
+    border-radius: 5px;
+    position: relative;
+
+    &:hover {
+        box-shadow: 0 2px 4px rgba(40, 41, 61, .04), 0 8px 16px rgba(96, 97, 112, .16);
+        .favorite {
+            display: flex;
+        }
+    }
+}
+
+.favorite {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (max-width: 580px) {
+        flex-direction: row;;
+    }
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 580px) {
+        flex-direction: column;;
+    }
+}
+
+.favorite-icon {
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #f2f4f8;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(255, 0, 0);
+        border: 1px solid rgb(255, 0, 0);
+    }
+}
+
+
+.image-card {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+    @media screen and (max-width: 580px) {
+        max-width: 150px;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 10px;
+}
+
+.availability {
+    background: #06c270;
+    padding: .125rem .25rem;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: lowercase;
+    border-radius: 5px;
+}
+
+.code {
+    color: #8f90a6;
+    font-size: 10px;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.tecknical-description {
+    margin-top: 10px;
+
+    @media screen and (max-width: 580px) {
+        display: none;
+    }
+}
+
+.tecknical-description-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #8f90a6;
+}
+
+.price {
+    display: flex;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.button-count-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f2f2f5;
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: 39px;
+    width: 128px;
+}
+
+.btn-main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 4px 10px;
+}
+
+.button-count {
+    border-left: 1px solid #f2f2f5;
+}
+
+.button-increment {
+    border-left: 1px solid #f2f2f5;
+}
+
+.button-add {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    padding: 8px;
+}
