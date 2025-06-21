@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Создание подписи</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                color: #333;
+            }
+            .container {
+                min-height: 100vh;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            h1 {
+                color: #ff6600;
+                text-align: center;
+            }
+            textarea {
+                width: 100%;
+                height: 150px;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+            }
+            .section {
+                margin-bottom: 20px;
+            }
+            .label {
+                font-weight: bold;
+                margin-bottom: 8px;
+                display: block;
+            }
+            .options {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .option-btn {
+                background-color: #ff6600;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            .option-btn.active {
+                background-color: #333;
+            }
+            input[type='date'] {
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+            }
+            .submit-btn {
+                margin-top: auto;
+                padding: 15px;
+                font-size: 18px;
+                background-color: #ff6600;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- <h1>Создание подписи</h1> -->
+
+            <textarea
+                id="userText"
+                placeholder="Введите ваш текст..."></textarea>
+
+            <div class="section">
+                <label class="label">Выберите дату:</label>
+                <input style="width: 100%" type="date" id="datePicker" />
+            </div>
+
+            <div class="section">
+                <label class="label">Локация:</label>
+                <div class="options" id="locationOptions"></div>
+            </div>
+
+            <div class="section">
+                <label class="label">Праздники:</label>
+                <div class="options" id="holidayOptions"></div>
+            </div>
+
+            <div class="section">
+                <label class="label">События:</label>
+                <div class="options" id="eventOptions"></div>
+            </div>
+
+            <div class="section">
+                <label class="label">Личность:</label>
+                <div class="options" id="personOptions"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitForm()">
+                Скопировать и перейти
+            </button>
+        </div>
+
+        <script>
+            const locations = [
+                'Псков',
+                'Опочка',
+                'Москва',
+                'Минск',
+                'Белоруссия',
+                'СПБ',
+            ];
+            const holidays = [
+                'Новый год',
+                'Рождество',
+                '23 февраля',
+                '8 Марта',
+                'Пасха',
+                'День труда',
+                'День победы',
+                'День знаний',
+                'День рождения',
+            ];
+            const events = [
+                'Традиции',
+                'Утренник',
+                'Путешествие',
+                'Поздравление',
+                'Спортивные достижения',
+                'Соревнования',
+                'Футбол',
+                'Дзюдо',
+                'Гимнастика',
+                'Школа',
+                'Прогулка',
+                'Покатушки',
+            ];
+            const persons = [
+                'Николай',
+                'Раиса',
+                'Татьяна',
+                'Павел',
+                'Ирина',
+                'Тимоша',
+                'Матвей',
+                'Соня',
+            ];
+
+            const selected = {
+                location: [],
+                holiday: [],
+                event: [],
+                person: []
+            };
+
+            function createOptionButtons(containerId, options, key) {
+                const container = document.getElementById(containerId);
+                options.forEach((option) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerText = option;
+                    btn.onclick = () => {
+                        const isSelected = selected[key].includes(option);
+                        if (isSelected) {
+                            selected[key] = selected[key].filter(
+                                (item) => item !== option
+                            );
+                            btn.classList.remove('active');
+                        } else {
+                            selected[key].push(option);
+                            btn.classList.add('active');
+                        }
+                    };
+                    container.appendChild(btn);
+                });
+            }
+
+            function getSeason(date) {
+                const month = date.getMonth() + 1;
+                if ([12, 1, 2].includes(month)) return 'Зима';
+                if ([3, 4, 5].includes(month)) return 'Весна';
+                if ([6, 7, 8].includes(month)) return 'Лето';
+                return 'Осень';
+            }
+
+            function formatDateVerbose(date) {
+              return date.toLocaleDateString('ru-RU', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+              });
+            }
+          
+            function submitForm() {
+              const text = document.getElementById('userText').value.trim();
+              const dateInput = document.getElementById('datePicker').value;
+            
+              let output = '';
+              if (text) {
+                output += text + '\n';
+              }
+            
+              let seasonTag = '';
+              if (dateInput) {
+                const date = new Date(dateInput);
+                output += formatDateVerbose(date) + '\n';
+            
+                // добавляем время года
+                const season = getSeason(date);
+                seasonTag = `#${season.replace(/\s+/g, '')}`;
+              }
+            
+              // собираем хештеги из выбранных значений + сезон
+              const hashtags = [
+                ...Object.values(selected).flat().map(tag => `#${tag.replace(/\s+/g, '')}`),
+                seasonTag
+              ]
+                .filter(Boolean)
+                .join(' ');
+            
+              if (hashtags) {
+                output += `\n${hashtags}`;
+              }
+            
+              console.log('📋 Скопировано:', output);
+              if (output) {
+                navigator.clipboard.writeText(output);
+                window.location.href = 'https://t.me/c/2231008379/2/999999999';
+              } else {
+                alert('Нечего копировать. Пожалуйста, введите текст, дату или выберите хотя бы один пункт.');
+              }
+            }
+
+            createOptionButtons('locationOptions', locations, 'location');
+            createOptionButtons('holidayOptions', holidays, 'holiday');
+            createOptionButtons('eventOptions', events, 'event');
+            createOptionButtons('personOptions', persons, 'person');
+        </script>
+    </body>
+</html>
